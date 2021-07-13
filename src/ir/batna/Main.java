@@ -1,5 +1,6 @@
 package ir.batna;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Main {
@@ -7,13 +8,12 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Integer> unsortedArray = new ArrayList<>();
-        unsortedArray.add(8);
-        unsortedArray.add(7);
-        unsortedArray.add(6);
-        unsortedArray.add(5);
-        unsortedArray.add(4);
-        unsortedArray.add(0);
-        unsortedArray.add(2);
+        for (int i=0;i<20;i++){
+            Random random=new Random();
+            unsortedArray.add(random.nextInt(20));
+        }
+
+
         MergeSort ms = new MergeSort(unsortedArray);
 
         System.out.println("---------Initial Unsorted Array---------");
